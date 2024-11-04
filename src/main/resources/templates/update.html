@@ -23,6 +23,46 @@
             <input type="text" th:field="*{Name}" class="form-control mb-4 col-4">
                                  
                 <input type="text" th:field="*{email}" class="form-control mb-4 col-4">
+
+                <input type="text" th:field="*{salary}" class="form-control mb-4 col-4">
+                 <!-- Dropdown for Department -->
+            <select th:field="*{department}" class="form-control mb-4 col-4">
+                <option value="">Select Department</option>
+                <option value="HR">HR</option>
+                <option value="Finance">Finance</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Sales">Sales</option>
+            </select>
+
+             <!-- Radio Buttons for Gender -->
+             <div class="mb-4">
+                <label>Gender:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" th:field="*{gender}" value="Male" id="genderMale">
+                    <label class="form-check-label" for="genderMale">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" th:field="*{gender}" value="Female" id="genderFemale">
+                    <label class="form-check-label" for="genderFemale">Female</label>
+                </div>
+            </div>
+
+            <!-- Checkbox for Skills -->
+            <div class="mb-4">
+                <label>Skills:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" th:field="*{skills}" value="Java" id="skillJava">
+                    <label class="form-check-label" for="skillJava">Java</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" th:field="*{skills}" value="Python" id="skillPython">
+                    <label class="form-check-label" for="skillPython">Python</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" th:field="*{skills}" value="JavaScript" id="skillJavaScript">
+                    <label class="form-check-label" for="skillJavaScript">JavaScript</label>
+                </div>
+            </div>
                  
                 <button type="submit" class="btn btn-info col-2"> Update Employee</button>
         </form>
